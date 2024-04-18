@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../utils/store/appSlice";
+import HeaderSearch from "./HeaderSearch";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -26,15 +27,8 @@ const Header = () => {
           />
         </a>
       </div>
-      <div className="col-span-10 text-center px-10">
-        <input
-          className="w-1/2 p-2 border border-gray-200 rounded-l-full"
-          type="text"
-        />
-        <button className="px-4 py-2  border border-gray-200 bg-gray-200 rounded-r-full">
-          Search
-        </button>
-      </div>
+
+      <HeaderSearch />
       <div className="col-span-1">
         <img
           className="h-8 text-right"

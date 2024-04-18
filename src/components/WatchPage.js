@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { collapseMenu } from "../utils/store/appSlice";
 import { useSearchParams } from "react-router-dom";
+import { clearCache } from "../utils/store/searchSlice";
 
 const WatchPage = () => {
   const dispatch = useDispatch();
@@ -11,6 +12,7 @@ const WatchPage = () => {
 
   useEffect(() => {
     dispatch(collapseMenu());
+    dispatch(clearCache());
   }, []);
 
   return (
